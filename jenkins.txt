@@ -54,13 +54,13 @@ pipeline {
         
         stage('Staging Tests') {
             steps {
-                echo ‘Running checks and integration tests on the staging setup'
+                echo 'Running checks and integration tests on the staging setup'
             }
         }
         
         stage('Deploy to Production') {
             steps {
-                echo ‘Starting deployment process to the production environment...'
+                echo 'Starting deployment process to the production environment...'
             }
         }
     }
