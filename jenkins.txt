@@ -54,26 +54,26 @@ pipeline {
         
         stage('Staging Tests') {
             steps {
-                echo 'Executing integration tests on staging environment...'
+                echo ‘Running checks and integration tests on the staging setup'
             }
         }
         
         stage('Deploy to Production') {
             steps {
-                echo 'Deploying to production environment...'
+                echo ‘Starting deployment process to the production environment...'
             }
         }
     }
     
     post {
         success {
-            echo 'Pipeline completed successfully!'
+            echo 'Success!'
         }
         failure {
-            echo 'Pipeline failed during execution!'
+            echo 'Failed!'
         }
         always {
-            cleanWs() // Cleaning up the workspace after completion
+            cleanWs() 
         }
     }
 }
